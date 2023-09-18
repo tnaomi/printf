@@ -7,7 +7,7 @@
 
 
 int _printf(const char *format, ...);
-int binary (int num)
-int octal(int num)
+int binary (int num);
+int octal(int num);
 
 #endif /* MAIN_H */

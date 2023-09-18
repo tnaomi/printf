@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - printf function
  * @format : format string
@@ -7,6 +8,7 @@
 
 int _printf(const char *format, ...)
 {
+	char *str, ch;
 	int output_char = 0; /*string_length = 0; tracks characters length*/
 	va_list arg_list;
 
@@ -32,15 +34,13 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c') /* character handling*/
 			{
-				char ch = va_arg(arg_list, int);
-
+				ch = va_arg(arg_list, int);
 				write(1, &ch, 1);
 				output_char++;
 			}
 			else if (*format == 's') /* string handling*/
 			{
-				char *str = va_arg(arg_list, char*);
-
+				str = va_arg(arg_list, char*);
 				output_char = strlen(str);
 				write(1, str, output_char); /* writing the string to STDOUT*/
 			}

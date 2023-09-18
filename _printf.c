@@ -41,7 +41,8 @@ int _printf(const char *format, ...)
 			{
 				char *str = va_arg(arg_list, char*);
 
-				write(1, str, strlen(str)); /* writing the string to STDOUT*/
+				output_char = strlen(str);
+				write(1, str, output_char); /* writing the string to STDOUT*/
 			}
 		}
 		format++;

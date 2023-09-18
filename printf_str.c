@@ -9,7 +9,7 @@
 int printf_str(va_list str)
 {
 	char *s;
-	unsigned int indx = 0, len;
+	unsigned int indx = 0, len = 0;
 
 	s = va_arg(str, char *);
 

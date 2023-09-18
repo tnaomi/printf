@@ -39,9 +39,11 @@ int _printf(const char *format, ...)
 				output_char++;
 			}
 			else if (*format == 's') /* string handling*/
+			{
 				str = va_arg(arg_list, char*);
 				output_char = strlen(str);
 				write(1, str, output_char); /* writing the string to STDOUT*/
+			}
 		}
 		format++;
 	}

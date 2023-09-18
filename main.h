@@ -6,19 +6,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
+#include <unistd.h>
 
-/**
-*struct printf_args - for format specifiers
-* @spec: individual specifier
-* @f: function pointer
-*/
-typedef struct printf_args
-{
-	char *spec;
-	int (*f)();
-} p_args;
 
-int _printf(const char *format, ...);
+int printf(const char *format, ...);
+int binary(int num)
+int octal(int num)
 
 /*COMPONENT FXNS*/
 int printf_str(va_list str);

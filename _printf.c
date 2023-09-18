@@ -26,21 +26,21 @@ int _printf(const char *format, ...)
 			format++; /*skips the % character*/
 			if (*format == '\0')
 				break;
-			if (*format == '%') /* applies when %% is encountered*/
+			if (*format == '%'){ /* applies when %% is encountered*/
 				write(1, format, 1);
-				output_char++;
-			else if (*format == 'c') /* character handling*/
+				output_char++;}
+			else if (*format == 'c'){ /* character handling*/
 				char ch = va_arg(arg_list, int);
 
 				write(1, &ch, 1);
-				output_char++;
-			else if (*format == 's') /* string handling*/
+				output_char++;}
+			else if (*format == 's'){ /* string handling*/
 				char *str = va_arg(arg_list, char*);
 
-				while (str[string_length] != '\0') /* string length calculation*/
-					string_length++; /*increament the string length*/
+				while (str[string_length] != '\0'){ /* string length calculation*/
+					string_length++;} /*increament the string length*/
 				write(1, str, string_length); /* writing the string to STDOUT*/
-				output_char += string_length;
+				output_char += string_length;}
 		}
 		format++;
 	}

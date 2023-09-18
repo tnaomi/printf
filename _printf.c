@@ -7,7 +7,7 @@
 
 int _printf(const char *format, ...)
 {
-	int output_char = 0; string_length = 0; /*tracks characters length*/
+	int output_char = 0; /*string_length = 0; tracks characters length*/
 	va_list arg_list;
 
 	if (format == NULL) /*Terminate the program if the format string is empty*/
@@ -41,9 +41,9 @@ int _printf(const char *format, ...)
 			{
 				char *str = va_arg(arg_list, char*);
 
-				/*while (str[string_length] != '\0')  string length calculation
+				/*while (str[string_length] != '\0') * string length calculation *
 				{
-					string_length++; increament the string length
+					string_length++; * increament the string length*
 				}*/
 				write(1, str, strlen(str)); /* writing the string to STDOUT*/
 				output_char += string_length;

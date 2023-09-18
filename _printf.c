@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 					string_length++; * increament the string length*
 				}*/
 				write(1, str, strlen(str)); /* writing the string to STDOUT*/
-				output_char += string_length;
+				/*output_char += string_length;*/
 			}
 		}
 		format++;

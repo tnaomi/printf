@@ -4,15 +4,16 @@
  * @format : format string
  * Return : return output char
  */
+
 int _printf(const char *format, ...)
 {
-	char ch;
-	int output_char = 0, string_length = 0; /*tracks characters length*/
+	int output_char = 0; int string_length = 0; /*tracks characters length*/
 	va_list arg_list;
 
 	if (format == NULL) /*Terminate the program if the format string is empty*/
 		return (-1);
 	va_start(arg_list, format); /*format string is last function argument*/
+
 	while (*format) /* iterates through all characters of our format string*/
 	{
 		if (*format != '%')
@@ -29,7 +30,8 @@ int _printf(const char *format, ...)
 				write(1, format, 1);
 				output_char++;
 			else if (*format == 'c') /* character handling*/
-				ch = va_arg(arg_list, int);
+				char ch = va_arg(arg_list, int);
+
 				write(1, &ch, 1);
 				output_char++;
 			else if (*format == 's') /* string handling*/

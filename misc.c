@@ -34,17 +34,18 @@ int _putchar(char c, unsigned int size)
  * @str: Input string
  * Return: integer
 */
-int print_string(char *str)
+int print_string(va_list arg_list, unsigned int len)
 {
-	unsigned int indx = 0, len;
+	char *str = va_arg(arg_list, char *);
 
 	if (str == NULL)
 		str = "(NULL)";
 	len = _strlen(str);
-	if (*str &&  len > 0)
+	while (*str != '\0')
 	{
-		for (; indx < len; indx++)
-			_putchar(str[indx], 1);
+		_putchar(*str, 1);
+		len++;
+		str++;
 	}
 	return (len);
 }

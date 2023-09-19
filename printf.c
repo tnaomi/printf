@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 		_putchar(*(format), 1);
 		++format;
 	}
-	_putchar('\n');
+
 	va_end(arg_list);
 	return (len);
 }

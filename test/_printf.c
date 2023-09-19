@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printf - printf function
+ * _prrrintf - printf function
  * @format : format string
  * Description: _printf takes several arguments starting with a format string
  * it's a variadic function and can therefore take any list size
@@ -15,7 +15,7 @@
  * (null terminating character isn't considered)
  */
 
-int _printf(const char *format, ...)
+int _prrrintf(const char *format, ...)
 {
 	char *str, ch;
 	int output_char = 0; /*string_length = 0; tracks characters length*/

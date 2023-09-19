@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 				str = va_arg(arg_list, char*);
 				print_string(str);
 			}
-			else if (*format == '\n')
+			else if (*(format) == '\\' && *(format + 1) == 'n')
 				_putchar('\n');
 			format++;
 		}

@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define TOTAL_HEX 16
 /**
  * struct arguments - a defined structure of arguments
  *
@@ -27,6 +28,7 @@ typedef struct arguments
 int _printf(const char *format, ...);
 int select_f(const char *format, va_list arg_list, unsigned int len);
 int binary(unsigned int num, unsigned int len);
+int address(va_list arg_list, unsigned int len);
 int octal(int num);
 
 /*HELPER FUNCTIONS*/
@@ -36,6 +38,6 @@ int print_string(va_list arg_list, unsigned int len);
 int print_integer(va_list arg_list, unsigned int len);
 
 /* FLAG FUNCTIONS */
-int _flag(char *str, parameter *parameters)
+int _flag(char *str, parameter *parameters);
 
 #endif /* MAIN_H */

@@ -29,5 +29,5 @@ int _flag(char *str, parameter *parameters)
 			x = parameters->flag_hashtag = 1;
 			break;
 	}
-	return (i);
+	return (x);
 }

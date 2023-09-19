@@ -8,7 +8,7 @@
 */
 int address(va_list arg_list, unsigned int len)
 {
-		const void *ptr = va_arg(arg_list, void *);
+		void *ptr = va_arg(arg_list, void *);
 		/*Assign unsigned long since hex number is large*/
 		unsigned long random = (unsigned long) ptr;
 		unsigned long temp = random;

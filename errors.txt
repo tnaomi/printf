@@ -1,0 +1,14 @@
+_printf.c: In function ‘_printf’:
+_printf.c:31:25: error: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   31 |                         write(1, format, 1); /*only 1 byte is needed to print a char*/
+      |                         ^~~~~~~~~~~~~~~~~~~
+_printf.c:40:33: error: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   40 |                         {       write(1, format, 1);
+      |                                 ^~~~~~~~~~~~~~~~~~~
+_printf.c:46:33: error: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   46 |                                 write(1, &ch, 1);
+      |                                 ^~~~~~~~~~~~~~~~
+_printf.c:53:33: error: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   53 |                                 write(1, str, output_char); /* writing the string to STDOUT*/
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors

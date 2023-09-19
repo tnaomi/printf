@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	va_start(arg_list, format); /*format string is last function argument*/
 	while (*format && *format != '\0')
 	{
-		_putchar(*format);
+		_putchar(*format, 1);
 		if (*format == '%')
 		{
 			format++; /*skips the % character*/

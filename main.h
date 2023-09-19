@@ -35,4 +35,7 @@ int _putchar(char c, unsigned int size);
 int print_string(va_list arg_list, unsigned int len);
 int print_integer(va_list arg_list, unsigned int len);
 
+/* FLAG FUNCTIONS */
+int _flag(char *str, parameter *parameters)
+
 #endif /* MAIN_H */

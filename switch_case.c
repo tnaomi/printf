@@ -25,7 +25,6 @@ int select_f(const char *format, va_list arg_list, unsigned int len)
 			break;
 		case 's':
 			len = print_string(arg_list, len);
-			len++;
 			break;
 	}
 	return (len);

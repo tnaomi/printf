@@ -24,13 +24,11 @@ int _printf(const char *format, ...)
 	if (format == NULL) /*Terminate the program if the format string is empty*/
 		return (-1);
 	va_start(arg_list, format); /*format string is last function argument*/
-	while (*format)
+	while (*format && *format != '\0')
 	{
 		if (*format == '%')
 		{
 			format++; /*skips the % character*/
-			if (*format == '\0')
-				break;
 			if (*format == '%')
 			{
 				_putchar(37, 1);
@@ -47,7 +45,6 @@ int _printf(const char *format, ...)
 				str = va_arg(arg_list, char*);
 				print_string(str);
 			}
-
 			format++;
 		}
 		_putchar(*(format), 1);

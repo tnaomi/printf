@@ -31,7 +31,7 @@ int print_integer(va_list arg_list, unsigned int len)
 		for (indx = 1; indx < numbers; indx++)
 			pwr_10 *= 10;
 		digit = num / pwr_10;
-		len += _putchar(digit + '0', 2);
+		len += _putchar(digit + '0', 1);
 		num -= digit * pwr_10;
 		numbers--;
 	}

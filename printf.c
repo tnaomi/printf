@@ -29,7 +29,8 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c')
 			{
-				_putchar((va_arg(list, int)), 1);
+				ch = va_arg(arg_list, int);
+				_putchar(ch, 1);
 				len++;
 				break;
 			}

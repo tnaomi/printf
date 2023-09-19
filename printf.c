@@ -29,8 +29,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c')
 			{
-				ch = va_arg(arg_list, int);
-				_putchar(ch, 1);
+				_putchar((va_arg(list, int)), 1);
 				len++;
 				break;
 			}
@@ -38,18 +37,15 @@ int _printf(const char *format, ...)
 			{
 				str = va_arg(arg_list, char*);
 				print_string(str);
+				len++;
 				break;
 			}
 			++format;
 		}
-		else
-		{
-			_putchar(*(format), 1);
+		_putchar(*(format), 1);
 			len++;
 			format++;
-		}
 	}
-
 	va_end(arg_list);
 	return (len);
 }

@@ -1,16 +1,11 @@
 #include "main.h"
 
+int _strlen(char *str);
+int _putchar(char c, unsigned int size);
+int print_string(char *str);
 /**
 * _printf - printf function
 * @format : format string
-* Description: _printf takes several arguments starting with a format string
-* it's a variadic function and can therefore take any list size
-* Code has the following specifiers:
-*  c - character
-*  s - array of characters
-*  d - integers
-*  p - pointer
-*  x -hexadecimal
 * Return: returns length
 * (null terminating character isn't considered)
 */

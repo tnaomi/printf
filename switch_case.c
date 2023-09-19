@@ -30,6 +30,8 @@ int select_f(const char *format, va_list arg_list, unsigned int len)
 		case 'i':
 			len = print_integer(arg_list, len);
 			break;
+        case 'b':
+            len = binary(va_arg(arg_list, unsigned int), len);
 	}
 	return (len);
 }

@@ -15,7 +15,7 @@ int address(va_list arg_list, unsigned int len)
 		int digits = 0, indx, digit;
 		char total_hex[TOTAL_HEX] = "0123456789abcdef";
 		char hex[TOTAL_HEX];
-		
+
 		for (; temp != 0; digits++)
 			temp /= 16;
 
@@ -27,7 +27,7 @@ int address(va_list arg_list, unsigned int len)
 
 		else
 		{
-			for (indx = digits - 1; indx >= 0; indx--) 
+			for (indx = digits - 1; indx >= 0; indx--)
 			{
 				digit = random % 16;
 				hex[indx] = total_hex[digit];
@@ -37,5 +37,5 @@ int address(va_list arg_list, unsigned int len)
 				len += _putchar(hex[indx], 1);
 		}
 		return (len);
-	
+
 }

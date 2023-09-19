@@ -43,8 +43,8 @@ int _printf(const char *format, ...)
 			++format;
 		}
 		_putchar(*(format), 1);
-			len++;
-			format++;
+		len++;
+		format++;
 	}
 	va_end(arg_list);
 	return (len);

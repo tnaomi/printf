@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _flag - looks for the flag function
  * @str: input format string

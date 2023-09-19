@@ -26,10 +26,10 @@ int select_f(const char *format, va_list arg_list, unsigned int len)
 		case 's':
 			len = print_string(arg_list, len);
 			break;
-        case 'd':
-        case 'i':
-            len = print_integer(arg_list, len);
-            break;
+		case 'd':
+		case 'i':
+			len = print_integer(arg_list, len);
+			break;
 	}
 	return (len);
 }

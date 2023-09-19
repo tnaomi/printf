@@ -19,12 +19,10 @@ int print_integer(va_list arg_list, unsigned int len)
 		num = -num;
 		temp = num;
 	}
-	do
-	{
+	do {
 		numbers++;
 		temp /= 10;/*Prints the remainder*/
 	} while (temp != 0);
-	
 	while (numbers > 0)
 	{
 		pwr_10 = 1;
@@ -35,6 +33,5 @@ int print_integer(va_list arg_list, unsigned int len)
 		num -= digit * pwr_10;
 		numbers--;
 	}
-		
 	return (len);
 }

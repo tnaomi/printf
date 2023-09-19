@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		else /* handles the case where there is % special character*/
 		{
 			format++; /*skips the % character*/
-			formater(*format)
+			formater(format)
 			if (*format == '%') /* applies when %% is encountered*/
 			{	write(1, format, 1);
 				output_char++;

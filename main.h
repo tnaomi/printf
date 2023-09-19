@@ -6,6 +6,14 @@
 #include <unistd.h>
 #include <limits.h>
 
+typedef struct arguments
+{
+	unsigned int flag_plus	: 1;
+	unsigned int flag_minus	: 1;
+	unsigned int flag_zero	: 1;
+	unsigned int flag_hashtag: 1;
+	unsigned int flag_space	: 1;
+} parameter;
 
 int _printf(const char *format, ...);
 int select_f(const char *format, va_list arg_list, unsigned int len);/*switch case fxn*/

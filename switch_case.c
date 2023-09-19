@@ -32,6 +32,10 @@ int select_f(const char *format, va_list arg_list, unsigned int len)
 			break;
 		case 'b':
 			len = binary(va_arg(arg_list, unsigned int), len);
+			break;
+		case 'p':
+			len = address(arg_list, len);
+			break;
 	}
 	return (len);
 }

@@ -5,7 +5,14 @@
  * @format : format string
  * Description: _printf takes several arguments starting with a format string
  * it's a variadic function and can therefore take any list size
- * Return : return output char
+ * Code has the following specifiers:
+ *  c - character
+ *  s - array of characters
+ *  d - integers
+ *  p - pointer
+ *  x -hexadecimal
+ * Return : returns number of output char
+ * (null terminating character isn't considered)
  */
 
 int _printf(const char *format, ...)
@@ -17,7 +24,6 @@ int _printf(const char *format, ...)
 	if (format == NULL) /*Terminate the program if the format string is empty*/
 		return (-1);
 	va_start(arg_list, format); /*format string is last function argument*/
-
 	while (*format) /* iterates through all characters of our format string*/
 	{
 		if (*format != '%')

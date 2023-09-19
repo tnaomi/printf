@@ -37,14 +37,15 @@ int _printf(const char *format, ...)
 					print_string(str);
 					len++;
 					break;
-				default:
-					break;
 			}
 			++format;
 		}
+		else
+		{
 		_putchar(*(format), 1);
 		len++;
 		format++;
+		}
 	}
 	va_end(arg_list);
 	return (len);

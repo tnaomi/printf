@@ -1,4 +1,5 @@
 #include "../main.h"
+#include <stdio.h>
 
 /**
 *main - test function
@@ -6,12 +7,22 @@
 */
 int main(void)
 {
-	_printf("Proto%sytping\n", "24");
-	_putchar('\n', 1);
-	_printf("Hello, %c and welcome", 90);
-	_putchar('\n', 1);
-	_printf("What %c, %c, %c, %s, %%", 49, 60, 92, "Random");
-	_putchar('\n', 1);
-	return (0);
+	int len;
+
+
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len = printf("Let's try to printf a simple sentence.\n");
+    
+    
+
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    
+    len = _printf("Percent:[%%]\n");
+    len = printf("Percent:[%%]\n");
+    
+	return (len);
     
 }

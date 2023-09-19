@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				print_string(str);
 				break;
 			}
-			
+			++format;
 		}
 		_putchar(*(format), 1);
 		format++;

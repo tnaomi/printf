@@ -6,6 +6,15 @@
 #include <unistd.h>
 #include <limits.h>
 
+/**
+ * struct arguments - a defined structure of arguments
+ *
+ * @flag_plus: set when flag_plus is selected
+ * @flag_minus: set when flag_minus is selected
+ * @flag_zero: set when flag_zero is selected
+ * @flag_hashtag: set when flag_hashtag is selected
+ * @flag_space: set when flag_space is selected
+ */
 typedef struct arguments
 {
 	unsigned int flag_plus	: 1;

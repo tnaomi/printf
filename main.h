@@ -25,7 +25,7 @@ typedef struct arguments
 } parameter;
 
 int _printf(const char *format, ...);
-int select_f(const char *format, va_list arg_list, unsigned int len);/*switch case fxn*/
+int select_f(const char *format, va_list arg_list, unsigned int len);
 int binary(unsigned int num, unsigned int len);
 int octal(int num);
 

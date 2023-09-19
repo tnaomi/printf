@@ -30,9 +30,10 @@ int _putchar(char c, unsigned int size)
 }
 
 /**
- * print_string - print a string
- * @str: Input string
- * Return: integer
+ * print_string - print a string from va_list
+ * @arg_list: Input string
+ * @len: length of character string
+ * Return: len
 */
 int print_string(va_list arg_list, unsigned int len)
 {

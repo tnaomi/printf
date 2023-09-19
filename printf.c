@@ -21,25 +21,24 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++; /*skips the % character*/
-			if (*format == '%')
+			switch (*format)
 			{
-				_putchar(37, 1);
-				len++;
-				break;
-			}
-			else if (*format == 'c')
-			{
-				ch = va_arg(arg_list, int);
-				_putchar(ch, 1);
-				len++;
-				break;
-			}
-			else if (*format == 's')
-			{
-				str = va_arg(arg_list, char*);
-				print_string(str);
-				len++;
-				break;
+				case '%':
+					_putchar(37, 1);
+					len++;
+					break;
+				case 'c':
+					ch = va_arg(arg_list, int);
+					_putchar(ch, 1);
+					len++;
+					break;
+				case 's':
+					str = va_arg(arg_list, char*);
+					print_string(str);
+					len++;
+					break;
+				default:
+					break;
 			}
 			++format;
 		}

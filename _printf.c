@@ -1,7 +1,5 @@
 #include "main.h"
 
-void formater(const char *format)
-
 /**
  * _printf - printf function
  * @format : format string
@@ -30,7 +28,8 @@ int _printf(const char *format, ...)
 		else /* handles the case where there is % special character*/
 		{
 			format++; /*skips the % character*/
-			formater(format)
+			if (*format == '\0')
+				break;
 			if (*format == '%') /* applies when %% is encountered*/
 			{	write(1, format, 1);
 				output_char++;
@@ -52,15 +51,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg_list);
 	return (output_char);
-}
-
-/**
- * formater - function breaks if null terminator is encountered
- * @format : input to check
- * Return: null
- */
-void formater(const char *format)
-{
-	if (*format == '\0')
-		break;
 }

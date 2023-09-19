@@ -11,7 +11,7 @@
  *  d - integers
  *  p - pointer
  *  x -hexadecimal
- * Return : returns number of output char
+ * Return: returns number of output char
  * (null terminating character isn't considered)
  */
 

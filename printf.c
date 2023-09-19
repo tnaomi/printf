@@ -1,19 +1,19 @@
-#include "../main.h"
+#include "main.h"
 
 /**
- * _printf - printf function
- * @format : format string
- * Description: _printf takes several arguments starting with a format string
- * it's a variadic function and can therefore take any list size
- * Code has the following specifiers:
- *  c - character
- *  s - array of characters
- *  d - integers
- *  p - pointer
- *  x -hexadecimal
- * Return: returns length
- * (null terminating character isn't considered)
- */
+* _printf - printf function
+* @format : format string
+* Description: _printf takes several arguments starting with a format string
+* it's a variadic function and can therefore take any list size
+* Code has the following specifiers:
+*  c - character
+*  s - array of characters
+*  d - integers
+*  p - pointer
+*  x -hexadecimal
+* Return: returns length
+* (null terminating character isn't considered)
+*/
 
 int _printf(const char *format, ...)
 {
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 	if (format == NULL) /*Terminate the program if the format string is empty*/
 		return (-1);
 	va_start(arg_list, format); /*format string is last function argument*/
-	while (*format) 
+	while (*format)
 	{
 		if (*format == '%')
 		{
@@ -32,8 +32,8 @@ int _printf(const char *format, ...)
 			if (*format == '\0')
 				break;
 			if (*format == '%')
-			{	
-                _putchar(37, 1);
+			{
+				_putchar(37, 1);
 				len++;
 			}
 			else if (*format == 'c')
@@ -45,11 +45,11 @@ int _printf(const char *format, ...)
 			else if (*format == 's')
 			{
 				str = va_arg(arg_list, char*);
-				print_string(str); 
+				print_string(str);
 			}
-            format++;
+			format++;
 		}
-        _putchar(*(format), 1);
+		_putchar(*(format), 1);
 		++format;
 	}
 	va_end(arg_list);

@@ -7,13 +7,14 @@
 */
 int _strlen(char *str)
 {
-    unsigned len = 0, indx = 0;
-    if (*str)
-    {
-        for (; str[indx] != '\0';indx++)
-            len++;
-    }
-    return (len);
+	unsigned int len = 0, indx = 0;
+
+	if (*str)
+	{
+		for (; str[indx] != '\0'; indx++)
+			len++;
+	}
+	return (len);
 }
 
 /**
@@ -25,25 +26,25 @@ int _strlen(char *str)
 
 int _putchar(char c, unsigned int size)
 {
-    return(write(1, &c, size));
+	return (write(1, &c, size));
 }
 
 /**
  * print_string - print a string
  * @str: Input string
- * Return - integer
+ * Return: integer
 */
 int print_string(char *str)
 {
-    unsigned int indx = 0, len;
+	unsigned int indx = 0, len;
 
-    if (str == NULL)
-        str = "(NULL)";
-    len = _strlen(str);
-    if (*str &&  len > 0)
-    {
-        for (; indx < len; indx++)
-            _putchar(str[indx], 1);
-    }
-    return (len);
+	if (str == NULL)
+		str = "(NULL)";
+	len = _strlen(str);
+	if (*str &&  len > 0)
+	{
+		for (; indx < len; indx++)
+			_putchar(str[indx], 1);
+	}
+	return (len);
 }

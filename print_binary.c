@@ -17,10 +17,10 @@ int binary(unsigned int num, unsigned int len)
 		return (len);
 	}
 	for (indx = 0; num > 0; indx++, num /= 2)
-		binary_num[indx] = num % 2;	
+		binary_num[indx] = num % 2;
 
 	for (; indx > 0; indx--, len++)
 		_putchar('0' + binary_num[indx], 1);
-	
+
 	return (len);
 }

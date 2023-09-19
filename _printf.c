@@ -1,8 +1,12 @@
 #include "main.h"
 
+void formater(const char *format)
+
 /**
  * _printf - printf function
  * @format : format string
+ * Description: _printf takes several arguments starting with a format string
+ * it's a variadic function and can therefore take any list size
  * Return : return output char
  */
 
@@ -26,8 +30,7 @@ int _printf(const char *format, ...)
 		else /* handles the case where there is % special character*/
 		{
 			format++; /*skips the % character*/
-			if (*format == '\0')
-				break;
+			formater(*format)
 			if (*format == '%') /* applies when %% is encountered*/
 			{	write(1, format, 1);
 				output_char++;
@@ -49,4 +52,15 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg_list);
 	return (output_char);
+}
+
+/**
+ * formater - function breaks if null terminator is encountered
+ * @format : input to check
+ * Return: null
+ */
+void formater(const char *format)
+{
+	if (*format == '\0')
+		break;
 }

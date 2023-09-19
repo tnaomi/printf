@@ -6,10 +6,12 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define TOTAL_HEX 16
 
 int _printf(const char *format, ...);
 int select_f(const char *format, va_list arg_list, unsigned int len);/*switch case fxn*/
 int binary(unsigned int num, unsigned int len);
+int address(va_list arg_list, unsigned int len);
 int octal(int num);
 
 /*HELPER FUNCTIONS*/

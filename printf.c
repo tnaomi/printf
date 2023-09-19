@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 			len++;
 			format++;
 		}
-		format++;
 	}
 	va_end(arg_list);
 	return (len);

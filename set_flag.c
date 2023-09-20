@@ -1,33 +1,31 @@
 #include "main.h"
 
 /**
- * _flag - looks for the flag function
- * @str: input format string
- * @parameters: arguments structure defined in main.h
- *
- * Return: valid flag
+ * set_flags - Calculates active flags
+ * @format: Formatted string in which to print the arguments
+ * @i: take a parameter.
+ * Return: Flags:
  */
-int _flag(char *str, parameter *parameters)
+int set_flags(const char *format, int *i)
 {
-	int x = 0;
+	int n, x, flag = 0;
+	const int flag_array[] = {flag_plus, flag_minus, flag_hashtag, flag_zero, flag_space, 0};
+	const char flags[] = {'+', '-', '#', '0', ' ', '\0'}; /* + - # 0 */
 
-	switch (*str)
+	for (x = *i + 1; format[x] != '\0'; x++)
 	{
-		case '+':
-			x = parameters->flag_plus = 1;
-			break;
-		case '-':
-			x = parameters->flag_minus = 1;
-			break;
-		case '0':
-			x = parameters->flag_zero = 1;
-			break;
-		case ' ':
-			x = parameters->flag_space = 1;
-			break;
-		case '#':
-			x = parameters->flag_hashtag = 1;
+		for (n = 0; flags[j] != '\0'; n++)
+			if (format[x] == flags[n])
+			{
+				flag |= flag_array[n];
+				break;
+			}
+
+		if (flags[n] == 0)
 			break;
 	}
-	return (x);
+
+	*i = x - 1;
+
+	return (flag);
 }

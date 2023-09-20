@@ -5,7 +5,7 @@
  * @n: pointer to the argument
  * Return: void
  */
-void _parameters(parameter *parameters, va_list n)
+void _parameters(parameter *parameters, va_list arg_list)
 {
 	params->flag_plus = 0;
 	params->flag_minus = 0;
@@ -13,5 +13,5 @@ void _parameters(parameter *parameters, va_list n)
 	params->flag_hashtag = 0;
 	params->flag_space = 0;
 
-	(void)n;
+	(void)arg_list;
 }

@@ -7,6 +7,15 @@
 #include <limits.h>
 
 #define TOTAL_HEX 16
+
+/* FLAGS */
+/* FLAGS */
+#define flag_plus 2
+#define flag_minus 1
+#define flag_hashtag 8
+#define flag_zero 4
+#define flag_space 16
+
 /**
  * struct arguments - a defined structure of arguments
  *
@@ -38,6 +47,7 @@ int print_string(va_list arg_list, unsigned int len);
 int print_integer(va_list arg_list, unsigned int len);
 
 /* FLAG FUNCTIONS */
+int set_flags(const char *format, int *i);
 int _flag(char *str, parameter *parameters);
 void _parameters(parameter *parameters, va_list n);
 

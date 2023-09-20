@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * init_params - function resetting the buffer
  * @parameters: the structure of the parameters

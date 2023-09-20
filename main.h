@@ -39,5 +39,6 @@ int print_integer(va_list arg_list, unsigned int len);
 
 /* FLAG FUNCTIONS */
 int _flag(char *str, parameter *parameters);
+void _parameters(parameter *parameters, va_list n);
 
 #endif /* MAIN_H */

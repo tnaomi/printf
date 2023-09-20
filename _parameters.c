@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * init_params - function resetting the buffer
+ * _parameters - function resetting the buffer
  * @parameters: the structure of the parameters
  * @n: pointer to the argument
  * Return: void

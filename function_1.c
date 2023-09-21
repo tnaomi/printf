@@ -47,7 +47,7 @@ int unsigned_print(va_list type, char buff[],
  * Return: size of characters to print
  */
 int octal_print(va_list type, char buff[],
-	int flag, int width, int precision, int size)
+	int flag, int width, int prec, int size)
 {
 
 	int x = BUFF_SIZE - 2;
@@ -95,7 +95,7 @@ int hexadecimal_print(va_list type, char buff[],
 		flag, 'x', width, prec, size));
 }
 
-/************* PRINT UNSIGNED NUMBER IN UPPER HEXADECIMAL **************/
+/* PRINTING AN UNSIGNED NUMBER IN UPPER HEXADECIMAL */
 /**
  * hexa_upper_print - Function prints in upper hexadecimal
  * @type: argument list

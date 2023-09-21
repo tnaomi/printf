@@ -5,58 +5,58 @@
 /**
  * char_print - Function printing a character
  * @type: argument list
- * @buffer: An array handling printing
- * @flags: variable calculating flags that are active
+ * @buff: An array handling printing
+ * @flag: variable calculating flags that are active
  * @width: Width
- * @precision: specifies precision
+ * @prec: specifies precision
  * @size: specifies size
  * Return: size of characters to print
  */
-int char_print(va_list type, char buffer[],
-	int flags, int width, int precision, int size)
+int char_print(va_list type, char buff[],
+	int flag, int width, int prec, int size)
 {
-	char c = va_arg(type, int);
+	char ch = va_arg(type, int);
 
-	return (handle_write_char(c, buffer, flags, width, precision, size));
+	return (handle_write_char(ch, buff, flag, width, prec, size));
 }
 /* PRINT A STRING */
 /**
  * string_print - Function printing a string
  * @type: argument list
- * @buffer: An array handling printing
- * @flags:  variable calculating flags that are active
+ * @buff: An array handling printing
+ * @flag:  variable calculating flags that are active
  * @width: variable to get width.
- * @precision: specifies precision
+ * @prec: specifies precision
  * @size: specifies size
  * Return: size of characters to print
  */
-int string_print(va_list type, char buffer[],
-	int flags, int width, int precision, int size)
+int string_print(va_list type, char buff[],
+	int flag, int width, int prec, int size)
 {
 	int i, len = 0;
 	char *str = va_arg(type, char *);
 
-	UNUSED(buffer);
+	UNUSED(buff);
 	UNUSED(width);
-	UNUSED(flags);
+	UNUSED(flag);
 	UNUSED(size);
-	UNUSED(precision);
+	UNUSED(prec);
 	if (str == NULL)
 	{
 		str = "(null)";
-		if (precision >= 6)
+		if (prec >= 6)
 			str = "      ";
 	}
 
 	while (str[len] != '\0')
 		len++;
 
-	if (precision >= 0 && precision < len)
-		len = precision;
+	if (prec >= 0 && prec < len)
+		len = prec;
 
 	if (width > len)
 	{
-		if (flags & F_MINUS)
+		if (flag & F_MINUS)
 		{
 			write(1, &str[0], len);
 			for (i = width - len; i > 0; i--)

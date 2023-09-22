@@ -38,11 +38,11 @@ int pointer_print(va_list type, char buff[],
 		len++;
 	}
 
-	if ((flag & F_ZERO) && !(flag & F_MINUS))
+	if ((flag & FLAG_ZERO) && !(flag & FLAG_MINUS))
 		padd = '0';
-	if (flag & F_PLUS)
+	if (flag & FLAG_PLUS)
 		extra_c = '+', len++;
-	else if (flag & F_SPACE)
+	else if (flag & FLAG_SPACE)
 		extra_c = ' ', len++;
 
 	i++;
@@ -125,7 +125,7 @@ int reverse_print(va_list type, char buff[],
 	for (x = 0; str[x]; x++)
 		;
 
-	for (i = x - 1; x >= 0; x--)
+	for (x = x - 1; x >= 0; x--)
 	{
 		char z = str[x];
 

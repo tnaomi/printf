@@ -128,7 +128,7 @@ int write_num(int ind, char buff[],
 		{
 			if (extra_c)
 				buff[--padding_start] = extra_c;
-			return (write(1, &buff[padd_start], n - padding_start) +
+			return (write(1, &buff[padding_start], n - padding_start) +
 				write(1, &buff[ind], len - (1 - padding_start)));
 		}
 	}
@@ -181,7 +181,7 @@ int write_unsgnd(int is_negative, int ind,
 
 		buff[i] = '\0';
 
-		if (flags & FLAG_MINUS)
+		if (flag & FLAG_MINUS)
 		{
 			return (write(1, &buff[ind], len) + write(1, &buff[0], i));
 		}
@@ -233,7 +233,7 @@ int write_pointer(char buff[], int ind, int len,
 				buff[--ind] = extra_c;
 			return (write(1, &buff[3], i - 3) + write(1, &buff[ind], len));
 		}
-		else if (!(flags & FLAG_MINUS) && padd == '0')
+		else if (!(flag & FLAG_MINUS) && padd == '0')
 		{
 			if (extra_c)
 				buff[--padd_start] = extra_c;

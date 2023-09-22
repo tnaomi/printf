@@ -12,7 +12,7 @@
  * Return: size of characters to print
  */
 int unsigned_print(va_list type, char buff[],
-	int flag, int width, int prec, int size);
+	int flag, int width, int prec, int size)
 {
 	int x = BUFF_SIZE - 2;
 	unsigned long int n = va_arg(type, unsigned long int);
@@ -69,7 +69,7 @@ int octal_print(va_list type, char buff[],
 		n /= 8;
 	}
 
-	if (flags & F_HASH && init_number != 0)
+	if (flag & FLAG_HASH && init_number != 0)
 		buff[x--] = '0';
 
 	x++;
@@ -91,7 +91,7 @@ int octal_print(va_list type, char buff[],
 int hexadecimal_print(va_list type, char buff[],
 	int flag, int width, int prec, int size)
 {
-	return (hexa_print(type, "0123456789abcdef", buff,
+	return (print_hexa(type, "0123456789abcdef", buff,
 		flag, 'x', width, prec, size));
 }
 
@@ -109,7 +109,7 @@ int hexadecimal_print(va_list type, char buff[],
 int hexa_upper_print(va_list type, char buff[],
 	int flag, int width, int prec, int size)
 {
-	return (hexa_print(type, "0123456789ABCDEF", buff,
+	return (print_hexa(type, "0123456789ABCDEF", buff,
 		flag, 'X', width, prec, size));
 }
 
@@ -148,7 +148,7 @@ int hexa_print(va_list type, char map_to[], char buff[],
 		n /= 16;
 	}
 
-	if (flag & F_HASH && init_number != 0)
+	if (flag & FLAG_HASH && init_number != 0)
 	{
 		buff[x--] = flag_char;
 		buff[x--] = '0';

@@ -72,7 +72,7 @@ int octal_print(va_list type, char buff[],
 	if (flags & F_HASH && init_number != 0)
 		buff[x--] = '0';
 
-	i++;
+	x++;
 
 	return (write_unsgnd(0, x, buff, flag, width, prec, size));
 }
@@ -126,7 +126,7 @@ int hexa_upper_print(va_list type, char buff[],
  * @size: specifies size
  * Return: size of characters to print
  */
-int print_hexa(va_list type, char map_to[], char buff[],
+int hexa_print(va_list type, char map_to[], char buff[],
 	int flag, char flag_char, int width, int prec, int size)
 {
 	int x = BUFF_SIZE - 2;

@@ -13,7 +13,7 @@
  * Return: characters printed total.
  */
 int handle_write_char(char c, char buff[],
-	int flag, int width, int prec, int size)
+		int flag, int width, int prec, int size)
 {
 	int n = 0;
 	char space = ' ';

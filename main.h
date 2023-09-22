@@ -70,7 +70,7 @@ int int_print(va_list type, char buffer[],
 	int flags, int width, int precision, int size);
 
 int print_hexa(va_list type, char map_to[], char buff[],
-	int flag, char flag_char, int width, int prec, int size)
+	int flag, char flag_char, int width, int prec, int size);
 
 /* Function to print non printable characters */
 int non_printable_print(va_list type, char buffer[],

@@ -12,8 +12,8 @@
  * @size: specifies size
  * Return: size of characters to print
  */
-int char_print(va_list type, char buff[],
-	int flag, int width, int prec, int size)
+int print_char(va_list type, char buff[],
+		int flag, int width, int prec, int size)
 {
 	char ch = va_arg(type, int);
 
@@ -56,7 +56,7 @@ int string_print(va_list type, char buff[],
 
 	if (width > len)
 	{
-		if (flag & F_MINUS)
+		if (flag & FLAG_MINUS)
 		{
 			write(1, &str[0], len);
 			for (i = width - len; i > 0; i--)

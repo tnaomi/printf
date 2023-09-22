@@ -12,7 +12,7 @@
  * @size: specifies size
  * Return: size of characters to print
  */
-int print_char(va_list type, char buff[],
+int char_print(va_list type, char buff[],
 		int flag, int width, int prec, int size)
 {
 	char ch = va_arg(type, int);

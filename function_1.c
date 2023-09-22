@@ -126,7 +126,7 @@ int hexa_upper_print(va_list type, char buff[],
  * @size: specifies size
  * Return: size of characters to print
  */
-int hexa_print(va_list type, char map_to[], char buff[],
+int print_hexa(va_list type, char map_to[], char buff[],
 	int flag, char flag_char, int width, int prec, int size)
 {
 	int x = BUFF_SIZE - 2;

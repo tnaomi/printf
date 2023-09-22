@@ -62,7 +62,7 @@ int pointer_print(va_list type, char buff[],
  * @size: specifies size
  * Return: size of characters to print
  */
-int non_printable_print(va_list type, char buffer[],
+int non_printable_print(va_list type, char buff[],
 	int flag, int width, int prec, int size)
 {
 	int n = 0, offset = 0;
@@ -137,13 +137,13 @@ int reverse_print(va_list type, char buff[],
 /* PRINTing A STRING IN ROT13 */
 /**
  * rot13string_print - Print a string in rot13.
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Numbers of chars printed
+ * @type: argument list
+ * @buff: An array handling printing
+ * @flag: variable calculating flags that are active
+ * @width: Width
+ * @prec: specifies precision
+ * @size: specifies size
+ * Return: size of characters to print
  */
 int rot13string_print(va_list type, char buff[],
 	int flag, int width, int prec, int size)
